@@ -1,58 +1,70 @@
-
 package com.campana_backend.campana_backend.models;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Cliente {
-    
-    
+public class Cliente implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCliente;
-    
-    private String nombre;
-    
+    private int idCliente;
+
+    private String numero_obligacion;
+
     private String cedula;
+
+    private String cliente;
+
     
+    private String fecha_credito;
+
     private String sede;
-    
+
     private String asesor_cartera;
-    
+
     private String telefono_asesor;
-    
-    private float saldo_mora;
-    
-    private float saldo_total;
-    
-    private float valor_con_descuento;
-    
+
     private float interese_mora;
-    
+
     private float honorarios_abogado;
-    
+
+    private float capital_mora;
+
+    private float total_mora_pagar;
+
+    private float total_capital;
+
+    private float total_pagar;
+
     private float porcentaje_descuento;
+
+    private boolean aplica_descuento_honorario;
+
+    private float valor_descuento;
+    
+    private float minimo_pagar_amnistia;
 
     public Cliente() {
     }
 
-    public Long getIdCliente() {
+    public int getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(Long idCliente) {
+    public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNumero_obligacion() {
+        return numero_obligacion;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNumero_obligacion(String numero_obligacion) {
+        this.numero_obligacion = numero_obligacion;
     }
 
     public String getCedula() {
@@ -62,6 +74,24 @@ public class Cliente {
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
+
+    public String getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
+    public String getFecha_credito() {
+        return fecha_credito;
+    }
+
+    public void setFecha_credito(String fecha_credito) {
+        this.fecha_credito = fecha_credito;
+    }
+
+    
 
     public String getSede() {
         return sede;
@@ -87,30 +117,6 @@ public class Cliente {
         this.telefono_asesor = telefono_asesor;
     }
 
-    public float getSaldo_mora() {
-        return saldo_mora;
-    }
-
-    public void setSaldo_mora(float saldo_mora) {
-        this.saldo_mora = saldo_mora;
-    }
-
-    public float getSaldo_total() {
-        return saldo_total;
-    }
-
-    public void setSaldo_total(float saldo_total) {
-        this.saldo_total = saldo_total;
-    }
-
-    public float getValor_con_descuento() {
-        return valor_con_descuento;
-    }
-
-    public void setValor_con_descuento(float valor_con_descuento) {
-        this.valor_con_descuento = valor_con_descuento;
-    }
-
     public float getInterese_mora() {
         return interese_mora;
     }
@@ -127,6 +133,38 @@ public class Cliente {
         this.honorarios_abogado = honorarios_abogado;
     }
 
+    public float getCapital_mora() {
+        return capital_mora;
+    }
+
+    public void setCapital_mora(float capital_mora) {
+        this.capital_mora = capital_mora;
+    }
+
+    public float getTotal_mora_pagar() {
+        return total_mora_pagar;
+    }
+
+    public void setTotal_mora_pagar(float total_mora_pagar) {
+        this.total_mora_pagar = total_mora_pagar;
+    }
+
+    public float getTotal_capital() {
+        return total_capital;
+    }
+
+    public void setTotal_capital(float total_capital) {
+        this.total_capital = total_capital;
+    }
+
+    public float getTotal_pagar() {
+        return total_pagar;
+    }
+
+    public void setTotal_pagar(float total_pagar) {
+        this.total_pagar = total_pagar;
+    }
+
     public float getPorcentaje_descuento() {
         return porcentaje_descuento;
     }
@@ -134,9 +172,35 @@ public class Cliente {
     public void setPorcentaje_descuento(float porcentaje_descuento) {
         this.porcentaje_descuento = porcentaje_descuento;
     }
+
+    public boolean isAplica_descuento_honorario() {
+        return aplica_descuento_honorario;
+    }
+
+    public void setAplica_descuento_honorario(boolean aplica_descuento_honorario) {
+        this.aplica_descuento_honorario = aplica_descuento_honorario;
+    }
+
+    public float getValor_descuento() {
+        return valor_descuento;
+    }
+
+    public void setValor_descuento(float valor_descuento) {
+        this.valor_descuento = valor_descuento;
+    }
+
+    public float getMinimo_pagar_amnistia() {
+        return minimo_pagar_amnistia;
+    }
+
+    public void setMinimo_pagar_amnistia(float minimo_pagar_amnistia) {
+        this.minimo_pagar_amnistia = minimo_pagar_amnistia;
+    }
     
     
     
     
+    
+
 
 }
