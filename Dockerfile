@@ -4,6 +4,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:11-jre-slim
-COPY --from=build ./target/campana_backend-0.0.1-SNAPSHOT.jar /campana_backend.jar
+COPY --from=build /app/target/campana_backend-0.0.1-SNAPSHOT.jar /campana_backend-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
-CMD ["java", "-jar", "/campana_backend.jar"]
+CMD ["java", "-jar", "/campana_backend-0.0.1-SNAPSHOT.jar"]
