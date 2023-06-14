@@ -1,0 +1,5 @@
+com\campana_backend\campana_backend\controllers\ClienteController.class
+com\campana_backend\campana_backend\services\ClienteService.class
+com\campana_backend\campana_backend\models\Cliente.class
+com\campana_backend\campana_backend\CampanaBackendApplication.class
+com\campana_backend\campana_backend\repository\ClienteRepository.class
